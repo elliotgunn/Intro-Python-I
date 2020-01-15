@@ -22,3 +22,18 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+def cal():
+    inputs = input("What is the month and year?")
+    inputs = inputs.split(',')
+
+    if len(inputs) == 0:
+        print(calendar.month(themonth=datetime.today().month, theyear=datetime.today().year))
+    elif len(inputs) == 1:
+        print(calendar.month(themonth=int(inputs[0]), theyear=datetime.today().year))
+    elif len(inputs) == 2:
+        print(calendar.month(themonth=int(inputs[0]), theyear=int(inputs[1])))
+    else:
+        print("Error: please enter month (1-12) and/or year (4 digits)")
+#print(input_m)
+cal()
